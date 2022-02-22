@@ -24,7 +24,7 @@ if (isset($url[0])) {
         // If exists, set as controller
         $this->currentController = ucwords($url[0]);
         // Unset 0 Index
-        echo "here";
+
         unset($url[0]);
       }
     } /*here end the issset*/
