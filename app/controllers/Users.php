@@ -178,8 +178,10 @@
               $_SESSION['user_id'] = $user->ID;
               $_SESSION['user_email'] = $user->email;
               $_SESSION['user_name'] = $user->fullName;
+              if ($user->STATUS){
+                  redirect('dashboard');
+              }else{redirect('posts');}
 
-              redirect('posts');
           }
 
           public function logout(){
