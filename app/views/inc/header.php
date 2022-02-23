@@ -11,7 +11,8 @@
     <title><?php echo SITENAME; ?></title>
 </head>
 <body>
-<i class="fa-light fa-arrow-right-to-bracket"></i>
 <?php require APPROOT .'/views/inc/navBar.php'  /*<div class="container">*/
 ?>
+
+
 
