@@ -3,7 +3,10 @@
 
       public function index(){
           $data = [];
-          $this->view('admin/dashboard');
+          $this->view('admin/index');
+
       }
+
+
 
   }
