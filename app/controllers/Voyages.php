@@ -15,5 +15,7 @@
                 'trip' => $voyages
             ];
             $this->view('admin/voyage', $data);
-      }
+        }
+
+
     }

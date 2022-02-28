@@ -47,6 +47,33 @@
              return false;
          }
      }
+
+     //find & display users info
+     public function getUsersInfo(){
+         $this->db->query('SELECT * FROM sys_user WHERE STATUS = 0');
+         $row = $this->db->resultSet();
+
+         //checking
+         if ($this->db->rowCount() > 0){
+             return $row;
+         }else{
+             return false;
+         }
+
+     }
+
+     public function getSingleUserInfo($id){
+         $this->db->query('SELECT * FROM sys_user WHERE STATUS = 0 AND ID = :id');
+         $this->db->bind(':id',$id);
+         $row = $this->db->single();
+
+         if ($this->db->rowCount() > 0){
+             return $row;
+         }else{
+             return false;
+         }
+     }
+
  }
 
 

@@ -20,7 +20,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form>
+                <form method="post" action="<?php echo URLROOT;?>/voyage/searchVoyage" >
                     <div class="mb-3">
                         <label class="form-label">Depart Station</label>
                         <input type="text" class="form-control" id="username" name="departStation" placeholder="From..." />

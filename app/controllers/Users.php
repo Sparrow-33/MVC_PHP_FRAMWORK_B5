@@ -198,4 +198,17 @@
               return true;
           }else { return false;}
           }
+
+          public function userProfile(){
+            $this->userModel = $this->model('User');
+            $result = $this->userModel->getSingleUserInfo($_SESSION['user_id']);
+
+              $date = [
+                  'user'=> $result
+              ];
+            $this->view('pages/profile',$date);
+
+          }
+
+
   }
