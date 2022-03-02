@@ -4,7 +4,7 @@
             <?php flash('register_success'); ?>
             <h2 class="mx-auto">Adding a trip</h2>
             <p>Please fill out this to add </p>
-            <form action="" method="POST" >
+            <form action="<?php echo URLROOT ?>/dashboard/addVoyage" method="POST" >
 
                 <div class="form-group">
                     <label for="name">Depart Station</label>
@@ -32,14 +32,19 @@
 
                 <div class="form-group">
                     <label for="train">Train</label>
-                    <input type="text" name="train" class="form-control form-control-lg value="">
+                <!--    <input type="text" name="train" class="form-control form-control-lg value=""> -->
+                    <select name="id" class="form-control form-control-lg">
+                        <?php foreach ($data['train'] as $train) : ?>
+                        <option value="<?php echo $train-> ID ?>" > <?php echo $train-> t_name ?> </option>
+                        <?php endforeach;?>
+                    </select>
                     <span class="invalid-feedback"></span>
                 </div>
 
 
                 <div class="row">
                     <div class="col mt-2">
-                        <input type="submit" value="Login" class="btn btn-success btn-block">
+                        <input type="submit" value="Add" class="btn btn-success btn-block">
                     </div>
                 </div>
 

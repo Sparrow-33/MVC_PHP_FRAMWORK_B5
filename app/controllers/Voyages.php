@@ -17,5 +17,16 @@
             $this->view('admin/voyage', $data);
         }
 
+        public function addingVoyage(){
+
+            $this->trainModel = $this->model('Trains');
+            $train = $this->trainModel->getTrains();
+            $data = [
+                'train'=> $train
+            ];
+            $this->view('admin/index', $data);
+            include APPROOT."/views/admin/addVoyage.php";
+        }
+
 
     }

@@ -35,9 +35,23 @@
 
       public function addVoyage(){
 
-          $this->view('admin/index');
-          include APPROOT."/views/admin/addVoyage.php";
+
+          if($_SERVER['REQUEST_METHOD'] == 'POST') {
+              //SANITIZE POST data
+              $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+              $this->voyageModel = $this->model('Voyage');
+
+              $data = [
+                  'departStation' => trim($_POST['departStation']),
+                  'arriveStation' => trim($_POST['arriveStation']),
+                  'date' => $_POST['date'],
+                  'id' => $_POST['id'],
+                  'time' =>$_POST['time'],
+              ];
+
+              $this->voyageModel->addVoyage($data);
 
 
+          }
       }
   }

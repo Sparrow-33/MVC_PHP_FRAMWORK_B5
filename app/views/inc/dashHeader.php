@@ -29,10 +29,10 @@
                     <span class="nav_name">Users</span> </a>
                 <a href="<?php echo URLROOT;?>/dashboard/voyage" class="nav_link"> <i class="fas fa-subway "></i>
                     <span class="nav_name">Available trips</span> </a>
-                <a href="<?php echo URLROOT;?>/dashboard/addVoyage" class="nav_link"> <i class='bx bx-bookmark nav_icon'></i>
+                <a href="<?php echo URLROOT;?>/voyages/addingVoyage" class="nav_link"> <i class='bx bx-bookmark nav_icon'></i>
                     <span class="nav_name">Add a trip</span> </a>
-                <a href="#" class="nav_link"> <i class='bx bx-folder nav_icon'></i>
-                    <span class="nav_name">Files</span> </a>
+                <a href="#" class="nav_link " data-bs-toggle="modal" data-bs-target="#modalForm"> <i class='bx bx-folder nav_icon'></i>
+                    <span class="nav_name">Add a train</span> </a>
                 <a href="#" class="nav_link"> <i class='bx bx-bar-chart-alt-2 nav_icon'></i>
                     <span class="nav_name">Stats</span> </a>
             </div>
@@ -41,3 +41,6 @@
             <span class="nav_name">SignOut</span> </a>
     </nav>
 </div>
+
+<!-- Modal -->
+
