@@ -16,12 +16,22 @@
                 //$_POST = filter_input_array(INPUT_POST,FILTER_SANITIZE_STRING);
 
             $data = [
-                'id' => $_POST['submit']
+                'ID' => $_POST['submit'],
+                'UID' => $_SESSION['user_id']
             ];
 
-
-
+            $this->reserveModel->ReserveTrip($data);
 
             }
         }
-    }
+
+        function MyReservation($id){
+
+           $result = $this->reserveModel->GetReservedTrip($id);
+           $data = [
+               "trips" => $result
+           ];
+           $this->view('pages/reservedTrip', $data);
+
+        }
+}

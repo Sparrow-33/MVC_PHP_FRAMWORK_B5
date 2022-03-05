@@ -17,7 +17,7 @@
 
            <?php if(isset($_SESSION['user_id'])) : ?>
                     <li class="nav-item">
-                      <a class="nav-link" href="<?php echo URLROOT; ?>/users/userProfile"><i class="fas fa-suitcase"></i></a>
+                      <a class="nav-link" href="<?php echo URLROOT;?>/reservations/MyReservation/<?php echo $_SESSION['user_id'];?>"><i class="fas fa-suitcase"></i></a>
                     </li>
                     <?php endif; ?>
 

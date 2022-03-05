@@ -17,7 +17,7 @@
                                  T.places,
                                  T.t_name FROM voyage V,
                                  train T WHERE V.t_id=T.ID 
-                                   ORDER BY V.v_time DESC;');
+                                 ORDER BY V.v_time DESC;');
 
            return  $this->db->resultSet();
        }
