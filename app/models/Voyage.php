@@ -13,6 +13,7 @@
                                  V.v_date,
                                  V.V_ID,
                                  V.v_time,
+                                 V.STATUS,
                                  T.places,
                                  T.t_name FROM voyage V,
                                  train T WHERE V.t_id=T.ID 

@@ -24,7 +24,7 @@
         <td><?php echo $voyages->places; ?></td>
         <td>
             <a href="" data-bs-toggle="modal" data-bs-target="#modalForms"><i class="me-3 dashEdit fas fa-edit"></i></a>
-            <a href=""><i class="me-3 dashCancel fas fa-ban"></i></a>
+            <a href="" data-bs-toggle="modal" data-bs-target="#cancel"><i class="me-3 dashCancel fas fa-ban"></i></a>
         </td>
 
     </tr>
@@ -33,11 +33,11 @@
 
     </table>
 
-<div class="modal fade" id="modalForms" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="width: 100vw">
+<div class="modal fade" id="modalForms" tabindex="-1" aria-labelledby="exampleModalLabels" aria-hidden="true" style="width: 100vw">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Trip detail to modify</h5>
+                <h5 class="modal-title" id="exampleModalLabels">Trip detail to modify</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -52,19 +52,39 @@
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Date</label>
-                        <input type="date" class="form-control" id="username" name="" placeholder="To..." />
+                        <input type="date" class="form-control" id="username" name=""  />
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Time</label>
-                        <input type="time" class="form-control" id="username" name="" placeholder="To..." />
+                        <input type="time" class="form-control" id="username" name=""  />
                     </div>
 
 
                     <div class="modal-footer d-block ">
-                        <button type="submit" class="btn btn-warning float-end">Search<i class="bi bi-search"></i></button>
+                        <button type="submit" class="btn btn-warning float-end">Save<i class="fas fa-save ms-2"></i></button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
 </div>
+
+
+<!-- Cancel confirmation -->
+
+<div class="modal fade" id="cancel" aria-labelledby="cancelModel" aria-hidden="true" tabindex="-1" style="width: 100vw">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="cancelModel">Cancel this trip ?</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button"  class="btn btn-danger">Confirm</button>
+            </div>
+        </div>
+    </div>
+</div>
+

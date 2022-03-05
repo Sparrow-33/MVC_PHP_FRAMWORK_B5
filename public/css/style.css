@@ -6,9 +6,16 @@
 }
 
 body{
-  background: black;
+  background-image:url("../img/pos_bg_3.svg") ;
+  background-size: 900px;
+  background-position: center;
+  background-repeat: no-repeat;
 }
+.banner_span_title{
+  border-bottom: 3px solid #1d4e86;
 
+
+}
 .bg_img{
   display: none;
   object-fit: contain;
@@ -17,8 +24,8 @@ body{
   position: absolute;
   right: 0;
   margin: auto 0;
-  -webkit-clip-path: ellipse(105% 100% at 50% 0%);
-  clip-path: ellipse(105% 100% at 50% 0%);
+ /* -webkit-clip-path: ellipse(105% 100% at 50% 0%);
+  clip-path: ellipse(105% 100% at 50% 0%);*/
 }
 .bg_div{
 
@@ -33,17 +40,17 @@ body{
 
 }
 .container-fluid> h1{
-  background-image: url("../img/train1_BG.jpg");
+ /* background-image: url("../img/train1_BG.jpg");
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
   background-size: cover;
-  background-position: center;
+  background-position: center;*/
   position: absolute;
   font-size: 4.5em;
   font-weight: 600;
   margin-left:1em;
-  color: transparent;
+  color: black;
 
 }
 .container-fluid> h1>span{
@@ -75,6 +82,7 @@ nav{
   border-radius: 100vh;
   border: 1px solid black;
   background: white;
+  transform: translateY(4em);
 
 }
 
@@ -99,5 +107,20 @@ nav{
   color: #2eaf57;
 
 }
+.dashCancel{
+ /* color:var(--tab-cancel);*/
+  color: #BD0000FF;
+  background: #ff7272;
+  padding: 0.5em;
+  border-radius: 50%;
 
+}
+#test{
+  background: rgba( 255, 255, 255, 0.45 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 0px );
+  -webkit-backdrop-filter: blur( 0px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
 

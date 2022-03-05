@@ -1,10 +1,10 @@
 <?php require APPROOT.'/views/inc/header.php' ;?>
     <div class="container py-5">
 
-        <div class="row">
-            <div class="col-lg-4">
-                <div class="card mb-4">
-                    <div class="card-body text-center">
+        <div class="row ">
+            <div class="col-lg-4 ">
+                <div class="card mb-4 ">
+                    <div class="card-body text-center " >
                         <img src="<?php echo URLROOT;?>/public/img/male-avatr.svg" alt="avatar" class="rounded-circle img-fluid" style="width: 150px;">
                         <h5 class="my-3"><?php echo $data['user']->fullName ?></h5>
                         <p class="text-muted mb-1">User</p>
@@ -18,7 +18,7 @@
             </div>
             <div class="col-lg-8">
                 <div class="card mb-4">
-                    <div class="card-body">
+                    <div class="card-body" >
                         <div class="row">
                             <div class="col-sm-3">
                                 <p class="mb-0"><i class="fas fa-user me-3"></i>Full Name</p>

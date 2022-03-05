@@ -28,5 +28,14 @@
             include APPROOT."/views/admin/addVoyage.php";
         }
 
+        public function editVoyage(){
+
+            echo "heere";
+
+        }
+
+        public function cancelVoyage(){
+
+        }
 
     }

@@ -1,7 +1,7 @@
 <?php require APPROOT.'/views/inc/header.php' ;?>
 <img src="<?php echo URLROOT ?>./img/train6_BG.jpg" class=" bg_img img-fluid bg_img ">
 <div class=" container-fluid bg_div">
-    <h1 >Welcome to <span>YouExpress</span></h1>
+    <h1 >Welcome to <span class="banner_span_title">YouExpress</span></h1>
 </div>
 
 
@@ -20,7 +20,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form method="post" action="<?php echo URLROOT;?>/voyage/searchVoyage" >
+                <form method="post" action="<?php echo URLROOT;?>/VoyagePassenger/searchVoyage" >
                     <div class="mb-3">
                         <label class="form-label">Depart Station</label>
                         <input type="text" class="form-control" id="username" name="departStation" placeholder="From..." />
