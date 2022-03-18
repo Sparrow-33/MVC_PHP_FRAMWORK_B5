@@ -5,9 +5,24 @@
           if (!isLoggedIn()){
               redirect(('users/login'));
           }
+
+          $this->voyageModel = $this->model('Voyage');
+          $this->userModel = $this->model('User');
+          $this->trainmodel = $this->model('Trains');
+          $this->reserveModel = $this->model('Reservation');
       }
       public function index(){
-          $data = [];
+          $clients = $this->userModel->countUser();
+          $trains = $this->trainmodel->trainsCount();
+          $reserve = $this->reserveModel->reserveCount();
+          $voyages = $this->voyageModel->countVoyages();
+          $data = [
+              "num" => $clients,
+              'trains' =>$trains,
+              'reserve' =>$reserve,
+              'voyage' =>$voyages
+
+          ];
           $this->view('admin/index', $data);
           require APPROOT."/views/admin/statistics.php";
 
@@ -15,9 +30,9 @@
 
       public function voyage(){
           $this->voyageModel = $this->model('Voyage');
-          $voyages = $this->voyageModel->getVoyage();
+          $voyages = $this->voyageModel->getAllVoyages();
           $data = [
-              'trip' => $voyages
+              'trips' => $voyages
           ];
           $this->view('admin/index', $data);
           include APPROOT."/views/admin/voyage.php";
@@ -49,9 +64,25 @@
                   'time' =>$_POST['time'],
               ];
 
-              $this->voyageModel->addVoyage($data);
+             if ($this->voyageModel->addVoyage($data))  {
+                 redirect('dashboard');
+                 flash('addVoyage', 'Trip added successfully');
+             } else{ return  false;}
+
+             }
 
 
           }
+
+
+      function cancelVoyages($id)
+      {
+          $this->voyageModel = $this->model('Voyage');
+          if ($this->voyageModel->cancelVoyage($id)) {
+              redirect('dashboard');
+          } else {
+              return false;
+          }
+
       }
   }

@@ -210,5 +210,32 @@
 
           }
 
+          function editUserProfile($id){
+
+          if ($_SERVER['REQUEST_METHOD'] = 'POST'){
+              $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+
+              $data = [
+                  'name' => trim($_POST['name']),
+                  'email' => trim($_POST['email']),
+                  'phone' => trim($_POST['phone']),
+                  'address' => trim($_POST['address'])
+              ];
+
+           if ($this->userModel->editUserProfiles($id,$data)){
+
+               redirect('pages/index');
+               flash('edit_profile',' Successful Edit');
+
+           }else{
+               redirect('pages/index');
+               flash('failed_edit_profile',' Successful Edit','alert alert-danger');
+           }
+
+
+          }
+
+          }
+
 
   }

@@ -21,4 +21,14 @@
        return  $this->db->resultSet();
 
      }
+
+     function trainsCount(){
+         $this->db->query('SELECT * FROM train');
+         $this->db->execute();
+         $num =$this->db->rowCount();
+         if ($num > 0){
+             return $num;
+         }else{ return 0;
+         }
+     }
  }

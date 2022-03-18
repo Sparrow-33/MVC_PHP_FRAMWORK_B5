@@ -34,8 +34,26 @@
 
         }
 
-        public function cancelVoyage(){
+      function update(){
+            if ($_SERVER['REQUEST_METHOD'] = 'POST'){
+                $_POST = filter_input_array(INPUT_POST,FILTER_SANITIZE_STRING);
 
-        }
+                //init data
+                $data = [
+                    'id' => trim($_POST['submit']),
+                    'depart' => trim($_POST['departStation']),
+                    'arrive' => trim($_POST['arriveStation']),
+                    'date' => trim($_POST['date']),
+                    'time' => trim($_POST['time'])
+                ];
+
+                if ($this->voyageModel->editVoyageInfo($data)){
+
+                    redirect('dashboard');
+                    flash('success_update','Trip Updated Successfully');
+                }
+
+            }
+      }
 
     }

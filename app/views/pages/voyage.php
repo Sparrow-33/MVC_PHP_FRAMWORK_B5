@@ -20,9 +20,11 @@
                                 <span class="text-muted small mx-2 available">Canceled</span>
                                 <span class="ms-3 me-4">|</span></p>
                                 <?php endif; ?>
-                            <button type="submit" value="<?php echo $result-> V_ID ?>" name="submit" class="btn btn-outline-dark btn-sm btn-floating">
+                               <?php if ($result-> STATUS) :?>
+                                <button type="submit" value="<?php echo $result-> V_ID ?>" name="submit" class="btn btn-outline-dark btn-sm btn-floating">
                                 <i class="fas fa-plus"></i>
                             </button>
+                            <?php endif;?>
                         </div>
                     </div>
                 </div>

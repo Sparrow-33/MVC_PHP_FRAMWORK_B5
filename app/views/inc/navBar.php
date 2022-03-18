@@ -6,27 +6,27 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex justify-content-center">
 
 
           <?php if(isset($_SESSION['user_id'])) : ?>
           <li class="nav-item">
-            <a class="nav-link" href="<?php echo URLROOT; ?>/users/userProfile"><i class="fas  fa-user-circle"></i></a>
+            <a class="nav-link ms-3" href="<?php echo URLROOT; ?>/users/userProfile"><i class="fas  fa-user-circle login"></i></a>
           </li>
           <?php endif; ?>
 
            <?php if(isset($_SESSION['user_id'])) : ?>
                     <li class="nav-item">
-                      <a class="nav-link" href="<?php echo URLROOT;?>/reservations/MyReservation/<?php echo $_SESSION['user_id'];?>"><i class="fas fa-suitcase"></i></a>
+                      <a class="nav-link ms-3" href="<?php echo URLROOT;?>/reservations/MyReservation/<?php echo $_SESSION['user_id'];?>"><i class="fas fa-suitcase login"></i></a>
                     </li>
                     <?php endif; ?>
 
         </ul>
 
-        <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+        <ul class="navbar-nav ml-auto mb-2 mb-lg-0 d-flex justify-content-center">
          <?php if(isset($_SESSION['user_id'])) : ?>
                  <li class="nav-item">
-                    <a class="nav-link " aria-current="page" href="<?php echo URLROOT; ?>/users/logout"><i class="fas fa-sign-out-alt"></i></a>
+                    <a class="nav-link " aria-current="page" href="<?php echo URLROOT; ?>/users/logout"><i class="fas fa-sign-out-alt login"></i></a>
                  </li>
          <?php else : ?>
                   <li class="nav-item">

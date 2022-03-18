@@ -5,27 +5,26 @@
 
 }
 
+html{
+  height: max-content;
+}
+
 body{
-  background-image:url("../img/pos_bg_3.svg") ;
-  background-size: 900px;
-  background-position: center;
-  background-repeat: no-repeat;
+  width: 100vw;
 }
+main{
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
 .banner_span_title{
-  border-bottom: 3px solid #1d4e86;
-
 
 }
-.bg_img{
-  display: none;
-  object-fit: contain;
-  width: 100%;
-  height: 500px;
-  position: absolute;
-  right: 0;
-  margin: auto 0;
- /* -webkit-clip-path: ellipse(105% 100% at 50% 0%);
-  clip-path: ellipse(105% 100% at 50% 0%);*/
+.bgImg{
+
+  display: inline-block;
+
 }
 .bg_div{
 
@@ -36,20 +35,12 @@ body{
 
 
 }
-.container-fluid{
 
-}
-.container-fluid> h1{
- /* background-image: url("../img/train1_BG.jpg");
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.container-fluid> div> h1{
 
-  background-size: cover;
-  background-position: center;*/
-  position: absolute;
+  text-align: center;
   font-size: 4.5em;
   font-weight: 600;
-  margin-left:1em;
   color: black;
 
 }
@@ -58,37 +49,28 @@ body{
 
 }
 nav{
-  background: white;
-  border-bottom: 1px solid #d9d9d9;
+  background: transparent;
+  //border-bottom: 1px solid #d9d9d9;
+
 }
 
 .login{
   color: black;
   font-size: 1.5rem;
+  font-weight: 300;
+  transition: ease-in-out 200ms;
+}
+
+.login:hover{
+  color: #00B4D8;
 }
 
 /*-------------------------*/
-#main_btn
-{
- /* position: absolute;
-  left: 2em;*/
-  margin: 0 auto;
-  color: black;
-  align-self: flex-end ;
-  font-weight: 600;
-  font-size: 1.2em;
-  padding: 0.5em 1em;
-  z-index: 99;
-  border-radius: 100vh;
-  border: 1px solid black;
-  background: white;
-  transform: translateY(4em);
 
-}
 
-.btn-container{
+/*.btn-container{
   height: 70vh;
-}
+} */
 
 .bi-search{
   margin-left: 10px;
@@ -124,3 +106,154 @@ nav{
   border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
+.login_sec{
+  border: 1px solid ;
+  border-radius: 10px;
+  padding: 1em 2em;
+}
+
+.index_section{
+
+}
+#btn-container{
+  display: block;
+  height: fit-content;
+}
+
+.btn_container{
+  display: flex;
+  height: 50px;
+  justify-content: center;
+//  border: 1px solid red;
+  margin-bottom: 1em;
+
+}
+
+#main_btn
+{
+  position: absolute;
+  margin: 0 auto;
+  color: black;
+  align-self: flex-end ;
+  font-weight: 600;
+  font-size: 1.2em;
+  padding: 0.5em 1em;
+  z-index: 99;
+  border-radius: 100vh;
+  border: 1px solid black;
+  background: white;
+  transition:  300ms ease-in-out;
+
+}
+#main_btn:hover
+{
+  letter-spacing: 1px;
+  border-color: #00B4D8;
+}
+
+
+/*----------------- TEST ZONE ! -------------------*/
+
+.A1{
+ // border: 1px solid yellow;
+  display: flex;
+  justify-content: center;
+
+}
+
+a{
+  text-decoration: none;
+}
+
+h1{
+  color: #00B4D8;
+}
+.first-section {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  padding: 0px 0px 0px 40px ;
+}
+.first-section .online img{
+  width: 700px;
+}
+
+.title-btn > p{
+  font-size: 1.5rem;
+}
+
+@media (max-width: 1000px){
+
+
+  .first-section .online img{
+    width: 500px;
+  }
+
+  .title-btn h1{
+    font-size: 2rem;
+  }
+  .title-btn > p{
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 770px){
+
+  .first-section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+    padding: 0px 0px 0px 10px ;
+  }
+
+  .first-section .online img{
+    width: 350px;
+  }
+
+  .title-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .title-btn h1{
+    font-size: 3rem;
+  }
+  .title-btn > p{
+    font-size: 1.5rem;
+  }
+}
+
+
+
+
+
+@media (max-width: 414px){
+  .first-section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+    padding: 0px 0px 0px 10px ;
+  }
+  .first-section .online img{
+    width: 300px;
+  }
+  .title-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .title-btn h1{
+    font-size: 3rem;
+  }
+
+}

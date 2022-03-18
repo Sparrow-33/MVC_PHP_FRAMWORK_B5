@@ -74,6 +74,42 @@
          }
      }
 
+     function findNameById($id){
+         $this->db->query('SELECT fullName FROM sys_user WHERE ID = :id');
+         $this->db->bind(':id', $id);
+         $row = $this->db->single();
+         if ($this->db->rowCount() > 0){
+             return $row;
+         }else{ return false;}
+     }
+
+     function editUserProfiles($id,$data){
+            $this->db->query('UPDATE sys_user
+                                     SET
+                                        fullName = :name,
+                                        email = :email,
+                                        phone = :phone,
+                                        address = :address  WHERE ID = :id');
+         $this->db->bind(':id', $id);
+         $this->db->bind(':name', $data['name']);
+         $this->db->bind(':email', $_POST['email']);
+         $this->db->bind(':phone', $_POST['phone']);
+         $this->db->bind(':address', $_POST['address']);
+
+         if ($this->db->execute()){
+             return true;
+         }else{ return false;}
+
+     }   function countUser(){
+
+         $this->db->query('SELECT * FROM sys_user WHERE STATUS = 0');
+         $this->db->execute();
+         $num =$this->db->rowCount();
+         if ($num > 0){
+             return $num;
+         }else{ return 0;
+         }
+      }
  }
 
 
